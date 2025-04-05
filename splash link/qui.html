@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Link Bank Account to Splash Bank</title>
+</head>
+<body>
+    <h1>Link Your Bank Account to Splash</h1>
+    <p>Select your bank and link it to your Splash account securely.</p>
+
+    <!-- Form for linking bank accounts -->
+    <form id="linkBankForm">
+        <label for="bank">Choose Your Bank:</label>
+        <select id="bank" name="bank" required>
+            <option value="" disabled selected>Select your bank</option>
+            <option value="bank1">Bank 1</option>
+            <option value="bank2">Bank 2</option>
+            <option value="bank3">Bank 3</option>
+        </select>
+        <br><br>
+        <label for="accountNumber">Enter Your Account Number:</label>
+        <input type="text" id="accountNumber" name="accountNumber" placeholder="Account Number" required>
+        <br><br>
+        <button type="button" id="linkBankButton">Link Bank Account</button>
+    </form>
+
+    <script>
+        document.getElementById('linkBankButton').addEventListener('click', function () {
+            const selectedBank = document.getElementById('bank').value;
+            const accountNumber = document.getElementById('accountNumber').value;
+
+            if (!selectedBank || !accountNumber) {
+                alert('Please select a bank and enter your account number.');
+                return;
+            }
+
+            // Simulate sending data to the back-end API
+            alert(`Linking your account (${accountNumber}) with ${selectedBank} to Splash...`);
+
+            // Example: Send data to the back-end API
+            fetch('/api/link-bank-to-splash', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    bank: selectedBank,
+                    accountNumber: accountNumber,
+                }),
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    alert('Your bank account has been successfully linked to Splash!');
+                } else {
+                    alert('Failed to link your bank account. Please try again.');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('An error occurred while linking your bank account.');
+            });
+        });
+    </script>
+</body>
+</html>
