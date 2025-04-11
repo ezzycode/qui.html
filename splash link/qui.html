@@ -1,67 +1,199 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Link Bank Account to Splash Bank</title>
-</head>
-<body>
-    <h1>Link Your Bank Account to Splash</h1>
-    <p>Select your bank and link it to your Splash account securely.</p>
+<html lang="en">  
+ <meta charset="UT-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Welcome to Splash Bank, your online banking solution.">
+    <meta name="keywords" content="banking, online banking, Splash Bank, QuickFunds">
+    <meta name="author" content="BerryBuild Initiative">
 
-    <!-- Form for linking bank accounts -->
-    <form id="linkBankForm">
-        <label for="bank">Choose Your Bank:</label>
-        <select id="bank" name="bank" required>
-            <option value="" disabled selected>Select your bank</option>
-            <option value="bank1">Bank 1</option>
-            <option value="bank2">Bank 2</option>
-            <option value="bank3">Bank 3</option>
-        </select>
-        <br><br>
-        <label for="accountNumber">Enter Your Account Number:</label>
-        <input type="text" id="accountNumber" name="accountNumber" placeholder="Account Number" required>
-        <br><br>
-        <button type="button" id="linkBankButton">Link Bank Account</button>
-    </form>
+    <title>Welcome to Splash Bank</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+<heading>   
+    <style> 
+</heading><            } 
+            .img { 
+                position: absolute;
+                top:0;
+                right: 0;
+                margin:10px;
+                width: 150px;
+                font-weight: bold;
+                text-align: center;
+                text-transform: uppercase;
+                text-decoration: underline;
+                text-shadow: 2px 2px 4px rgb(179, 133, 133);
+                  }</style>
+    </head>                                           
+                    <h1 style="background-color:rgba(146,111,66,0.5); 
+                       border-radius: 10px;
+                       border: 15px solid black;
+                       color:rgb(88, 88, 8);
+                       padding:5px;
+                       margin-top:0px;
+                       margin-left:5px;
+                       margin-right:5px;
+                       margin-bottom:0px;
+                       outline:auto rgb(88, 88, 0) 250px;
+                       outline-offset:-15px; 
+                       text-align:center;
+                       font-family:Monospace,ariel;
+                       text-align:left;
+                       ">Welcome to Splash Bank....</h1> 
 
-    <script>
-        document.getElementById('linkBankButton').addEventListener('click', function () {
-            const selectedBank = document.getElementById('bank').value;
-            const accountNumber = document.getElementById('accountNumber').value;
+                       
+                                                                                
+            <div style="background-color:rgb(219, 121, 121);
+                         border-color:dashed rgba(71, 33, 94,0.3) ;
+                         outline-offset:10px;
+                         outline-color:#4a431b;
+                         text-align:left;
+                         padding:5px;
+                         border:20px;
+                         background-size: contain;">
+               <label for="username">Username:</label>
+               <input type="text" id="username" name="username" required><br><br>
+               <label for="password">Password:</label>
+               <input type="password" id="password" name="password" required><br><br>
+               <input type="submit" value="Login"> 
+               </div>
 
-            if (!selectedBank || !accountNumber) {
-                alert('Please select a bank and enter your account number.');
-                return;
-            }
+                    <h1 style="background-color:rgba(220, 15, 15, 0.984);">Splash Bank App</h1>
+              
+              <div class="form" id="form-container" style="display: none;"> 
+                 <input type="number" id="amount" step="0.01" min="0" placeholder="Enter Amount">
 
-            // Simulate sending data to the back-end API
-            alert(`Linking your account (${accountNumber}) with ${selectedBank} to Splash...`);
+                 <button id="Submit btn" oneclick="processAction()"Submit</button>       
 
-            // Example: Send data to the back-end API
-            fetch('/api/link-bank-to-splash', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                    bank: selectedBank,
-                    accountNumber: accountNumber,
-                }),
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.success) {
-                    alert('Your bank account has been successfully linked to Splash!');
-                } else {
-                    alert('Failed to link your bank account. Please try again.');
-                }
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                alert('An error occurred while linking your bank account.');
-            });
-        });
-    </script>
-</body>
-</html>
+                    <p id="message">select Acount TYpe</p>
+                </div>> 
+      </heading>
+                 
+                 <h1  style="margin-top:5opx; margin-left:150px; text-decoration:overline; text-decoration-color:rgb(27, 108, 72); text-shadow: 4px black; font: cursive; font-family: cursive,monospace;">QuickFunds</h1> 
+
+                 <p style="float:left;backdrop;color:aqua;letter-space:11px;"> hi</p>
+        <p>QuickFunds is a simple and easy to use online payment platform that allows you to send and receive money online.</p> 
+
+        <p style=" background-color:#4a431b">
+            People deposit their money in banks<br> the bank lends the money out in car loans, credit cards, mortgages, and business loans. <i>The loan recipients spend the money they borrow</i>, the bank earns interest on the loans,<u>and the process keeps money moving through the system.</u> 
+        </p> 
+
+        <p style="color:rgb(121, 152, 190);
+                 font-family: Arial, sans-serif;
+                 font-weight:0;
+                 font-size:25px;
+                 border-style:outed;
+                 border-color:rgb(fffff);
+                 border-width:5px;
+                 border-radius:10px;
+                 padding:10px;
+                 background-color:#4a431b;">  
+            
+            <em>Although banks do many things, their primary role is to take in funds—called deposits—from those with money, pool them, and lend them to those who need funds. Banks are intermediaries between depositors (who lend money to the bank) and borrowers (to whom the bank lends money).</em>             
+             
+        </p>   
+        <p style="color:rgba(30, 4, 59,0.7) ;background-color:#4a431b;">Yeah...You there, yo! can now get a new Dollar Card from the comfort of your home.
+            Get in here let help you make transactions globally from the comfort of your Home </p> 
+
+            < div style="width:50px; height:150px; border:5px lightcoral; color: rgb(12, 16, 17); background-color:rgb(71, 154, 118); padding:10px;letter-spacing:12px;"><> 
+                 *PAYPAl 
+
+                 *CASHAPP
+
+                 *APPLEPAY
+
+                 *GOOGLEPAY
+
+                 *AMAZONPAY
+
+                 *QUICKFUNSCARDS
+
+                 *LEMFI
+
+                 *WESTERNUNIONPAY...
+                </div></ol>  
+            <!--float =positions an element to the left or right side of a container--> 
+
+             <div class="box" style="float:right; width:100px; height: 260px;border:1px solid; color: rgb(30, 3, 66); background-color:rgb(176, 164, 164);margin:5px; margin-left:200PX; "><div>                                                                   
+                <p>USSD### Banking</p>
+                <p>Mobile Banking</p>
+                <p>Internet Banking</p>
+                <p>ATM</p>     
+                <p>POS</p>
+                <p>Banking App</p> 
+            </div> 
+           </div>
+                
+                
+                <h2 style="text-align:center;background-color:; offset-path:5%;opacity:0.7;margin:10px;">Welcome To Our World</h2>  
+
+
+        <h3 style="color:rgba(8, 218, 229, 0.7);
+                   border-top-style:double;
+                   border-bottom-style:double;
+                   border-left-style:dashed;
+                   border-left-width:100px ;">Our Services</h3>
+        <ul>
+            <li>Send Money</li>
+              <ol> 
+                   <li>Internationally</li>
+                    <li>locally</li>           
+                  </ol> 
+            <li>Receive Money</li>
+            <li>Pay Bills</li>
+            <li>Request Money</li>
+            <li>Deposit Money</li>
+            <li>Short and Long term loan</li>
+            <li>Investment Banking</li>
+            <li>Crypto Stock Analysis</li>
+            </ul>   
+            <table borders="10" cellpadding="10" cellspacing="10">
+                <tr style="background-color:#7d858e;
+                          font-style: oblique;
+                          font-size: 15px;
+                          font-family: Helvetica, sans-serif, sans-serif;
+                          font-display:light;">
+                    <th>About Us.</th> 
+
+                    <th>Contact Address.</th>  
+
+                    <th>Profile.</th>
+
+                    <th>Legals.</th>
+
+                    <th>Terms&Conditions.</th>
+
+                    <th colspan="2">Partnerships and Adverts.</th>
+
+                    <th>Investment.</th>
+
+                    <th>Stock Exchange Market.</th>
+                </tr>
+                <tr style="background-color:rgb(127, 135, 142);">
+                    <td>Get to know us better.</td>
+                    <td>Get in Touch with us on email quick0192@aol.com</td> 
+                    <td>BerryBuild Initiative</td>  
+                     <td>House Of Chambers</td>
+                     <td>DOC</td>
+                    <td>DOC</td>
+                    <td>DOC</td> 
+                    <td>DOC</td>
+                    <td>NSE</td> 
+                               
+                </tr>
+               </table>       
+
+          </body>  
+
+    <footer style="background-color: rgba(3, 50, 66, 0.755); color: rgb(20, 1, 1); padding: 20px; text-align: center;outline-offset: -10px; outline-color: aqua ;margin:10px">
+        <p>Follow us on:</p>
+        <a href="https://www.facebook.com" target="_blank">Facebook</a> |
+        <a href="https://www.twitter.com" target="_blank">Twitter</a> |
+        <a href="https://www.instagram.com" target="_blank">Instagram</a> |
+        <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
+    <p style="border-radius: 25%;border-color: rgb(175, 181, 182);border-style:double;border-bottom: 25%; border-right: 25%;border-left:25% ;">Certified by the Federal Savings Commission</p>  
+
+
+    <p style="text-align:center;">&copy; 2023 QuickFunds. All rights reserved.</p>
+    <p style="text-align:center;">Designed by BerryBuild Initiative</p>
+
